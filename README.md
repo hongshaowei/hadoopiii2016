@@ -29,7 +29,21 @@
 - service ntpd start
 
 ### Java Download
-- https://drive.google.com/open?id=0BwcmldsH2om-NzhwUC1CdjBaVDg
+- http://192.168.81.1/dl/jdk-7u79-linux-x64.rpm
+- rpm –ivh /tmp/jdk-7u79-linux-x64.rpm
+
+### 於安裝主機上建立軟連結
+- ln -s /usr/java/jdk1.7.0_79 /usr/java/java
+
+### 於安裝主機設定環境變數
+- vi /etc/profile 
+
+### 立即更新
+- source /etc/profile
+
+### 檢查
+- java -version
+
 
 
 ## Centos 6.6 安裝步驟
