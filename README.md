@@ -21,7 +21,7 @@
 - ssh localhost
 
 ### setup hostname
-- gedit /etc/hosts
+- vi /etc/hosts
 - hostname master
 - hostname -f
 
