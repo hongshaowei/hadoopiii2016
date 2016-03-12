@@ -29,8 +29,8 @@
 - service ntpd start
 
 ### Java Download
-- http://192.168.81.1/dl/jdk-7u79-linux-x64.rpm
-- rpm –ivh /tmp/jdk-7u79-linux-x64.rpm
+- http://192.168.39.54/dl/jdk-7u79-linux-x64.rpm
+- rpm –ivh jdk-7u79-linux-x64.rpm
 
 ### 於安裝主機上建立軟連結
 - ln -s /usr/java/jdk1.7.0_79 /usr/java/java
@@ -38,11 +38,20 @@
 ### 於安裝主機設定環境變數
 - vi /etc/profile 
 
+    export JAVA_HOME=/usr/java/java
+    export JRE_HOME=$JAVA_HOME/jre
+    export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/rt.jar
+    export PATH=$PATH:$JAVA_HOME/bin
+
+
+
 ### 立即更新
 - source /etc/profile
 
-### 檢查
+### 檢查 Java 版本
 - java -version
+
+
 
 
 
