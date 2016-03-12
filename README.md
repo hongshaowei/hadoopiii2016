@@ -1,19 +1,8 @@
 ﻿# Big Data之處理與分析實務班
 ==========================
 
-## Slides:
-https://www.slideshare.net/secret/jAXKRnPCrknokG
 
-## [實際應用] 使用Hadoop 分析 Facebook 打卡資訊
-
-- https://www.youtube.com/watch?v=FQr2nVvkLzc
-
-sudo yum install python-pip
-
-sudo pip install requests
-
-
-## Hadoop on cloudera 安裝步驟
+## Hdp 安裝步驟
 
 - https://www.youtube.com/watch?v=rCm7LS2mivA
 
