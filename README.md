@@ -82,6 +82,9 @@ export PATH=$PATH:$JAVA_HOME/bin
 ### 安裝 Ambari
 - ambari-server start
 
+### 連線至Server
+- 192.168.81.128:8080
+
 ## Java WordCount 操作範例
 - https://www.youtube.com/watch?v=h0mFQkqNo5g
 
