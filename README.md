@@ -91,7 +91,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 - yum repolist
 
 ### 修改 replication
-- HDFS　-> block replication
+- HDFS　-> block replication -> 1
 
 ## 建議設定
 - wget http://public-repo-1.hortonworks.com/HDP/tools/2.3.0.0/hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
