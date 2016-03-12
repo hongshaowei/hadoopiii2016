@@ -53,6 +53,23 @@ export PATH=$PATH:$JAVA_HOME/bin
 - java -version
 
 
+### 於安裝主機關閉防火牆
+- chkconfig iptables off
+- service iptables stop
+
+### 於安裝主機設定SELlinux
+- vi /etc/selinux/config 將 SELINUX=disabled
+- setenforce 0
+
+### HDP建議關閉 Transparent Huge Pages，於安裝主機上執行
+- echo never > /sys/kernel/mm/redhat_transparent_hugepage/enabled
+- echo never > /sys/kernel/mm/redhat_transparent_hugepage/defrag
+
+### 確定登入帳號為 root 在 master 上執行
+- cd /tmp
+- wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.2.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo 
+- yum repolist
+- yum install ambari-server
 
 
 
