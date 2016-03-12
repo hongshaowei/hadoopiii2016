@@ -85,6 +85,14 @@ export PATH=$PATH:$JAVA_HOME/bin
 ### 連線至Server
 - 192.168.81.128:8080
 
+### 設定Repo
+- cd /tmp
+- wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.2.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo 
+- yum repolist
+
+### 修改 replication
+- HDFS　-> block replication
+
 ## Java WordCount 操作範例
 - https://www.youtube.com/watch?v=h0mFQkqNo5g
 
