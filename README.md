@@ -38,11 +38,12 @@
 ### 於安裝主機設定環境變數
 - vi /etc/profile 
 
-    export JAVA_HOME=/usr/java/java
-    export JRE_HOME=$JAVA_HOME/jre
-    export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/rt.jar
-    export PATH=$PATH:$JAVA_HOME/bin
-
+```
+export JAVA_HOME=/usr/java/java
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/rt.jar
+export PATH=$PATH:$JAVA_HOME/bin
+```
 
 
 ### 立即更新
