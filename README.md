@@ -25,12 +25,11 @@
 - hostname -f
 
 ### setup ntp
--chkconfig ntpd on
--service ntpd start
+- chkconfig ntpd on
+- service ntpd start
 
 ### Java Download
-- http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u79-oth-JPR
-
+- https://drive.google.com/open?id=0BwcmldsH2om-NzhwUC1CdjBaVDg
 
 
 ## Centos 6.6 安裝步驟
