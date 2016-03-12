@@ -93,6 +93,11 @@ export PATH=$PATH:$JAVA_HOME/bin
 ### 修改 replication
 - HDFS　-> block replication
 
+## 建議設定
+- wget http://public-repo-1.hortonworks.com/HDP/tools/2.3.0.0/hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
+- tar zxvf hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
+
+
 ## Java WordCount 操作範例
 - https://www.youtube.com/watch?v=h0mFQkqNo5g
 
