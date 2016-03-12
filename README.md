@@ -65,30 +65,22 @@ export PATH=$PATH:$JAVA_HOME/bin
 - echo never > /sys/kernel/mm/redhat_transparent_hugepage/enabled
 - echo never > /sys/kernel/mm/redhat_transparent_hugepage/defrag
 
-### 確定登入帳號為 root 在 master 上執行
+### 確定登入帳號為 root 在 master 上執行 (需要網路環境好的環境下)
 - cd /tmp
 - wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.2.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo 
 - yum repolist
 - yum install ambari-server
 
+### 替代方案
+- http://192.168.39.54/dl/ambari-server-2.2.0.0-1310.x86_64.rpm
+- yum localinstall ambari-server-2.2.0.0-1310.x86_64.rpm
 
+### 設定 Ambari
+- ambari-server setup
 
-## Centos 6.6 安裝步驟
-
-- https://www.youtube.com/watch?v=ARU_v3NtM20
-
-## Hadoop 安裝步驟
-
-- https://www.youtube.com/watch?v=f3CNowSfTms
-
-## Fully Distributed
-
-- https://www.youtube.com/watch?v=0CGSSxCCd2E
-
-- http://youtu.be/m60g0AWIcfQ
-
+### 安裝 Ambari
+- ambari-server start
 
 ## Java WordCount 操作範例
-
 - https://www.youtube.com/watch?v=h0mFQkqNo5g
 
