@@ -5,13 +5,33 @@
 
 - https://www.slideshare.net/secret/jAXKRnPCrknokG
 
-## Hdp 安裝步驟
-
-- https://www.youtube.com/watch?v=rCm7LS2mivA
 
 ## Centos 6.6 檔案下載
 
 - https://drive.google.com/a/largitdata.com/file/d/0BwcmldsH2om-T3dQS2V3QklmNHM/view?usp=sharing
+
+## 安裝步驟
+
+### prepare machine
+- ifconfig
+- su - 
+- ssh-keygen
+- cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+- ssh localhost
+
+### setup hostname
+- gedit /etc/hosts
+- hostname master
+- hostname -f
+
+### setup ntp
+-chkconfig ntpd on
+-service ntpd start
+
+### Java Download
+- http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u79-oth-JPR
+
+
 
 ## Centos 6.6 安裝步驟
 
