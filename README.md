@@ -124,6 +124,10 @@ hadoop.proxyuser.root.hosts=*
 - wget https://dumps.wikimedia.org/other/pagecounts-raw/2007/2007-12/pagecounts-20071209-180000.gz
 - gunzip pagecounts-20071209-180000.gz
 
+
+### eclipse
+- https://eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz&mirror_id=1109
+
 ## Java WordCount 操作範例
 - https://www.youtube.com/watch?v=h0mFQkqNo5g
 
