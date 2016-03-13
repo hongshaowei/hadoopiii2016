@@ -125,8 +125,16 @@ hadoop.proxyuser.root.hosts=*
 - gunzip pagecounts-20071209-180000.gz
 
 
-### eclipse
-- http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
+### eclipse (root)
+- wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
+- tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
+- cd eclipse 
+- ./eclipse
+
+#### include jar
+- a. /usr/lib/hadoop/client/*.jar
+- b. /usr/lib/hadoop/*.jar
+- c. /usr/lib/hadoop-mapreduce/*.jar
 
 ## Java WordCount 操作範例
 - https://www.youtube.com/watch?v=h0mFQkqNo5g
