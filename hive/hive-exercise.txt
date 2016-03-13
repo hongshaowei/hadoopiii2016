@@ -15,6 +15,7 @@ mysql -uhive -p finance -e "LOAD DATA LOCAL INFILE 'finance.csv' INTO TABLE Majo
 sqoop import --connect jdbc:mysql://localhost:3306/finance -username hive -password hadoop --query "select * from MajorTrade where 1=1 and \$CONDITIONS" --hive-table majortrade --create-hive-table --hive-import --hive-home /apps/hive/warehouse -m1 --target-dir majortrade
 
 //Entering hive
+su - hdfs
 hive
 
 //Making queries
