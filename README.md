@@ -135,3 +135,15 @@ hadoop.proxyuser.root.hosts=*
 - a. /usr/lib/hadoop/client/*.jar
 - b. /usr/lib/hadoop/*.jar
 - c. /usr/lib/hadoop-mapreduce/*.jar
+
+### link right java version (root)
+- rm /usr/bin/java
+- ln -s /usr/java/java/bin/java /usr/bin/java
+- java -version
+
+### move jar
+- su - 
+- mv /home/hadoop /wc1* /home/hdfs
+- chown hdfs:hdfs -R /home/hdfs/wc1*
+- su - hdfs
+- hadoop jar wc1.jar /user/admin/data /user/admin/out2
