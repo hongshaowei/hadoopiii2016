@@ -110,6 +110,7 @@ hadoop.proxyuser.root.hosts=*
 ```
 
 ## leave safemode
+- su - hdfs
 - hadoop dfsadmin -safemode leave
 
 ##設定權限
