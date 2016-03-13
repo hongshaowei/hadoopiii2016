@@ -101,7 +101,6 @@ export PATH=$PATH:$JAVA_HOME/bin
 - tar zxvf hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
 
 ## 使用Hive View
-- 
 - Services > HDFS > Configs.
 
 - Custom core-site -> Click Add Property:
@@ -114,6 +113,11 @@ hadoop.proxyuser.root.hosts=*
 - su - hdfs
 - hadoop fs -mkdir /user/admin
 - hadoop fs -chown admin:hadoop /user/admin
+
+
+## get wiki count
+- wget https://dumps.wikimedia.org/other/pagecounts-raw/2007/2007-12/pagecounts-20071209-180000.gz
+- gunzip pagecounts-20071209-180000.gz
 
 ## Java WordCount 操作範例
 - https://www.youtube.com/watch?v=h0mFQkqNo5g
