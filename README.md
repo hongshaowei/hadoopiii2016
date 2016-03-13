@@ -47,7 +47,6 @@ export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/
 export PATH=$PATH:$JAVA_HOME/bin
 ```
 
-
 ### 立即更新
 - source /etc/profile
 
@@ -101,6 +100,20 @@ export PATH=$PATH:$JAVA_HOME/bin
 - wget http://public-repo-1.hortonworks.com/HDP/tools/2.3.0.0/hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
 - tar zxvf hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
 
+## 使用Hive View
+- 
+- Services > HDFS > Configs.
+
+- Custom core-site -> Click Add Property:
+```
+hadoop.proxyuser.root.groups=*
+hadoop.proxyuser.root.hosts=*
+```
+
+##設定權限
+- su - hdfs
+- hadoop fs -mkdir /user/admin
+- hadoop fs -chown admin:hadoop /user/admin
 
 ## Java WordCount 操作範例
 - https://www.youtube.com/watch?v=h0mFQkqNo5g
