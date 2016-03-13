@@ -109,6 +109,9 @@ hadoop.proxyuser.root.groups=*
 hadoop.proxyuser.root.hosts=*
 ```
 
+## leave safemode
+- hadoop dfsadmin -safemode leave
+
 ##設定權限
 - su - hdfs
 - hadoop fs -mkdir /user/admin
@@ -116,6 +119,7 @@ hadoop.proxyuser.root.hosts=*
 
 
 ## get wiki count
+- su - hdfs
 - wget https://dumps.wikimedia.org/other/pagecounts-raw/2007/2007-12/pagecounts-20071209-180000.gz
 - gunzip pagecounts-20071209-180000.gz
 
