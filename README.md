@@ -131,11 +131,7 @@ hadoop.proxyuser.root.hosts=*
 - cd eclipse 
 - ./eclipse
 
-#### include jar
+### eclipse include jar
 - a. /usr/lib/hadoop/client/*.jar
 - b. /usr/lib/hadoop/*.jar
 - c. /usr/lib/hadoop-mapreduce/*.jar
-
-## Java WordCount 操作範例
-- https://www.youtube.com/watch?v=h0mFQkqNo5g
-
