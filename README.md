@@ -50,7 +50,6 @@ export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib/
 export PATH=$PATH:$JAVA_HOME/bin
 ```
 
-
 ### 立即更新
 - source /etc/profile
 
@@ -104,6 +103,50 @@ export PATH=$PATH:$JAVA_HOME/bin
 - wget http://public-repo-1.hortonworks.com/HDP/tools/2.3.0.0/hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
 - tar zxvf hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
 
-## Java WordCount 操作範例
-- https://www.youtube.com/watch?v=h0mFQkqNo5g
 
+## 使用Hive View
+- Services > HDFS > Configs.
+
+- Custom core-site -> Click Add Property:
+```
+hadoop.proxyuser.root.groups=*
+hadoop.proxyuser.root.hosts=*
+```
+
+## leave safemode
+- su - hdfs
+- hadoop dfsadmin -safemode leave
+
+##設定權限
+- su - hdfs
+- hadoop fs -mkdir /user/admin
+- hadoop fs -chown admin:hadoop /user/admin
+
+
+## get wiki count
+- su - hdfs
+- wget https://dumps.wikimedia.org/other/pagecounts-raw/2007/2007-12/pagecounts-20071209-180000.gz
+- gunzip pagecounts-20071209-180000.gz
+
+### eclipse (root)
+- wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
+- tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
+- cd eclipse 
+- ./eclipse
+
+### eclipse include jar
+- a. /usr/lib/hadoop/client/*.jar
+- b. /usr/lib/hadoop/*.jar
+- c. /usr/lib/hadoop-mapreduce/*.jar
+
+### link right java version (root)
+- rm /usr/bin/java
+- ln -s /usr/java/java/bin/java /usr/bin/java
+- java -version
+
+### move jar
+- su - 
+- mv /home/hadoop /wc1* /home/hdfs
+- chown hdfs:hdfs -R /home/hdfs/wc1*
+- su - hdfs
+- hadoop jar wc1.jar /user/admin/data /user/admin/out2
