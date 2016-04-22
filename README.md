@@ -14,14 +14,17 @@
 ## 安裝步驟
 ---------------------------------------
 
+### CentOS 安裝
+- https://www.youtube.com/watch?v=RkC16DNcYGI&feature=youtu.be
+
 ### prepare machine
-- ifconfig
 - su - 
 - ssh-keygen
 - cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 - ssh localhost
 
 ### setup hostname
+- ifconfig
 - vi /etc/hosts
 - hostname master
 - hostname -f
@@ -31,7 +34,7 @@
 - service ntpd start
 
 ### Java Download
-- http://192.168.39.54/dl/jdk-7u79-linux-x64.rpm
+- http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u79-oth-JPR
 - rpm –ivh jdk-7u79-linux-x64.rpm
 
 ### 於安裝主機上建立軟連結
@@ -100,7 +103,6 @@ export PATH=$PATH:$JAVA_HOME/bin
 ## 建議設定
 - wget http://public-repo-1.hortonworks.com/HDP/tools/2.3.0.0/hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
 - tar zxvf hdp_manual_install_rpm_helper_files-2.3.0.0.2557.tar.gz
-
 
 ## Java WordCount 操作範例
 - https://www.youtube.com/watch?v=h0mFQkqNo5g
