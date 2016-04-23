@@ -78,7 +78,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 - yum install ambari-server
 
 ### 替代方案
-- wget http://192.168.253.1/ambari-server-2.2.0.0-1310.x86_64.rpm
+- wget http://192.168.32.100/ambari-server-2.2.0.0-1310.x86_64.rpm
 - yum localinstall ambari-server-2.2.0.0-1310.x86_64.rpm
 
 ### 設定 Ambari
