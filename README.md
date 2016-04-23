@@ -152,3 +152,10 @@ hadoop.proxyuser.root.hosts=*
 - chown hdfs:hdfs -R /home/hdfs/wc1*
 - su - hdfs
 - hadoop jar wc1.jar /user/admin/data /user/admin/out2
+
+### Make local repo
+sudo yum install yum-utils createrepo
+- reposync -r cloudera-cdh5
+mv HDP /var/www/html
+mv HDP=utils /var/www/html 
+service httpd start
