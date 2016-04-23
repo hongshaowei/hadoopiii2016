@@ -36,6 +36,7 @@
 ### Java Download
 - http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u79-oth-JPR
 - https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/
+- http://192.168.253.1/jdk-7u79-linux-x64.rpm
 - rpm –ivh jdk-7u79-linux-x64.rpm
 
 ### 於安裝主機上建立軟連結
