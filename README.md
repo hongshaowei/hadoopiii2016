@@ -35,6 +35,7 @@
 
 ### Java Download
 - http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u79-oth-JPR
+- https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/
 - rpm –ivh jdk-7u79-linux-x64.rpm
 
 ### 於安裝主機上建立軟連結
@@ -76,7 +77,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 - yum install ambari-server
 
 ### 替代方案
-- http://192.168.39.54/dl/ambari-server-2.2.0.0-1310.x86_64.rpm
+- wget http://192.168.253.1/ambari-server-2.2.0.0-1310.x86_64.rpm
 - yum localinstall ambari-server-2.2.0.0-1310.x86_64.rpm
 
 ### 設定 Ambari
