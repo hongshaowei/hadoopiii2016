@@ -5,6 +5,7 @@
 
 - https://www.slideshare.net/secret/jAXKRnPCrknokG
 - https://www.slideshare.net/secret/zkzZx4ZMLAX4WF
+- https://www.slideshare.net/secret/dfD0p9YJG3SfOP
 
 ## Centos 6.6 檔案下載
 
