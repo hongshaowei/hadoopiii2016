@@ -150,6 +150,8 @@ hadoop.proxyuser.root.hosts=*
 - 確定 hdfs-site.xml 的 webhdfs 是 enabled 
 - oozie.service.ProxyUserService.proxyuser.hue.hosts * 
 - oozie.service.ProxyUserService.proxyuser.hue.groups *
+- webhcat.proxyuser.hue.hosts 是* 
+- webhcat.proxyuser.hue.groups 是*
 
 ### eclipse (root)
 - wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
