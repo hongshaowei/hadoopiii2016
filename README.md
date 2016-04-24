@@ -98,6 +98,12 @@ export PATH=$PATH:$JAVA_HOME/bin
 - wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.2.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo 
 - yum repolist
 
+
+### 使用local repo
+- 將url 更改成192.168.32.106
+- https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.1.0/bk_Installing_HDP_AMB/content/_hdp_23_repositories.html
+
+
 ### 修改 replication
 - HDFS　-> block replication -> 1
 
