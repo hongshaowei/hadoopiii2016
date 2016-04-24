@@ -12,7 +12,7 @@ mysql -uhive -p finance< create-finance.sql
 mysql -uhive -p finance -e "LOAD DATA LOCAL INFILE 'finance.csv' INTO TABLE MajorTrade FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' (item, volume, value, date)"
 
 //Using sqoop to import data
-sqoop import --connect jdbc:mysql://localhost:3306/finance -username hive -password hadoop --query "select * from MajorTrade where 1=1 and \$CONDITIONS" --hive-table majortrade --create-hive-table --hive-import --hive-home /apps/hive/warehouse -m1 --target-dir majortrade
+sqoop import --connect jdbc:mysql://localhost:3306/finance -username hive -password hadoop --query "select * from MajorTrade where 1=1 and \$CONDITIONS" --hive-table majortrade --create-hive-table --hive-import --hive-home /apps/hive/warehouse -m1 --target-dir majortrade --driver com.mysql.jdbc.Driver
 
 //Entering hive
 su - hdfs
