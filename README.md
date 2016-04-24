@@ -5,7 +5,6 @@
 
 - https://www.slideshare.net/secret/jAXKRnPCrknokG
 - https://www.slideshare.net/secret/zkzZx4ZMLAX4WF
-- https://www.slideshare.net/secret/dfD0p9YJG3SfOP
 
 ## Centos 6.6 檔案下載
 
@@ -137,6 +136,21 @@ hadoop.proxyuser.root.hosts=*
 - wget https://dumps.wikimedia.org/other/pagecounts-raw/2007/2007-12/pagecounts-20071209-180000.gz
 - gunzip pagecounts-20071209-180000.gz
 
+
+## setup hue
+
+- hadoop.proxyuser.hue.hosts * 
+- hadoop.proxyuser.hue.groups * 
+- hadoop.proxyuser.hcat.groups * 
+- hadoop.proxyuser.hcat.hosts * 
+- hadoop.proxyuser.root.groups * 
+- hadoop.proxyuser.root.hosts * 
+- hadoop.proxyuser.ambariusr.groups * 
+- hadoop.proxyuser.ambariusr.hosts *  
+- 確定 hdfs-site.xml 的 webhdfs 是 enabled 
+- oozie.service.ProxyUserService.proxyuser.hue.hosts * 
+- oozie.service.ProxyUserService.proxyuser.hue.groups *
+
 ### eclipse (root)
 - wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
@@ -159,6 +173,3 @@ hadoop.proxyuser.root.hosts=*
 - chown hdfs:hdfs -R /home/hdfs/wc1*
 - su - hdfs
 - hadoop jar wc1.jar /user/admin/data /user/admin/out2
-
-### Open local httpd service 
-- service httpd start
