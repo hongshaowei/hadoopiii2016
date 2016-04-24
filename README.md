@@ -173,6 +173,7 @@ hadoop.proxyuser.root.hosts=*
 ### Process Data
 - head part-r-00000
 - cat part-r-00000 | sort -k 2 -nr | head
+- cat part-r-00000 | sort -k 2 -nr | awk '{if(length($0)>10) print $0}' | head
 
 
 ### link right java version (root)
