@@ -167,9 +167,8 @@ hadoop.proxyuser.root.hosts=*
 - ./eclipse
 
 ### eclipse include jar
-- a. /usr/lib/hadoop/client/*.jar
-- b. /usr/lib/hadoop/*.jar
-- c. /usr/lib/hadoop-mapreduce/*.jar
+- a. /usr/hdp/2.3.4.0-3485/hadoop/client/*.jar
+- b. /usr/hdp/2.3.4.0-3485/hadoop-mapreduce/*.jar
 
 ### link right java version (root)
 - rm /usr/bin/java
