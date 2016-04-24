@@ -177,13 +177,14 @@ hadoop.proxyuser.root.hosts=*
 
 
 ### link right java version (root)
+- su - 
 - rm /usr/bin/java
 - ln -s /usr/java/java/bin/java /usr/bin/java
 - java -version
 
 ### move jar
 - su - 
-- mv /home/hadoop /wc1* /home/hdfs
-- chown hdfs:hdfs -R /home/hdfs/wc1*
+- mv wc* /home/hdfs/
+- chown hdfs:hdfs -R /home/hdfs/wc*
 - su - hdfs
-- hadoop jar wc1.jar /user/admin/data /user/admin/out2
+- hadoop jar wc.jar /tmp/wc.txt /tmp/out
