@@ -157,7 +157,7 @@ hadoop.proxyuser.root.hosts=*
 
 ## setup ini 
 - vi /etc/hue/conf/hue.ini
-- webhdfs_url=http://master:50070/webhdfs/v1
+- webhdfs_url=http://master:50070/webhdfs/v1/
 - /etc/init.d/hue restart
 
 ### eclipse (root)
