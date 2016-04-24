@@ -5,6 +5,7 @@
 
 - https://www.slideshare.net/secret/jAXKRnPCrknokG
 - https://www.slideshare.net/secret/zkzZx4ZMLAX4WF
+- https://www.slideshare.net/secret/dfD0p9YJG3SfOP
 
 ## Centos 6.6 檔案下載
 
@@ -158,3 +159,6 @@ hadoop.proxyuser.root.hosts=*
 - chown hdfs:hdfs -R /home/hdfs/wc1*
 - su - hdfs
 - hadoop jar wc1.jar /user/admin/data /user/admin/out2
+
+### Open local httpd service 
+- service httpd start
