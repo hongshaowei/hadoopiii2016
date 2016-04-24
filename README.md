@@ -160,7 +160,7 @@ hadoop.proxyuser.root.hosts=*
 - webhdfs_url=http://master:50070/webhdfs/v1/
 - /etc/init.d/hue restart
 
-### eclipse (root)
+### eclipse (hadoop)
 - wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - cd eclipse 
@@ -169,6 +169,11 @@ hadoop.proxyuser.root.hosts=*
 ### eclipse include jar
 - a. /usr/hdp/2.3.4.0-3485/hadoop/client/*.jar
 - b. /usr/hdp/2.3.4.0-3485/hadoop-mapreduce/*.jar
+
+### Process Data
+- head part-r-00000
+- cat part-r-00000 | sort -k 2 -nr | head
+
 
 ### link right java version (root)
 - rm /usr/bin/java
