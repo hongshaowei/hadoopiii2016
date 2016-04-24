@@ -45,4 +45,4 @@ GROUP BY item, t.total;
 mysql -uhive -p finance -e 'create table item_portion (item varchar(100), portion float)'
 
 //Using sqoop to export data back to mysql
-sqoop export --connect jdbc:mysql://localhost:3306/finance --table item_portion --export-dir /apps/hive/warehouse/item_portion --username hive -password hadoop -m1 --input-fields-terminated-by '\001'
+sqoop export --connect jdbc:mysql://localhost:3306/finance --table item_portion --export-dir /apps/hive/warehouse/item_portion --username hive -password hadoop -m1 --input-fields-terminated-by '\001' --driver com.mysql.jdbc.Driver
