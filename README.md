@@ -154,6 +154,12 @@ hadoop.proxyuser.root.hosts=*
 - webhcat.proxyuser.hue.hosts 是* 
 - webhcat.proxyuser.hue.groups 是*
 
+
+## setup ini 
+- vi /etc/hue/conf/hue.ini
+- webhdfs_url=http://master:50070/webhdfs/v1
+- /etc/init.d/hue restart
+
 ### eclipse (root)
 - wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
