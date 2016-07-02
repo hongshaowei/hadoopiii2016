@@ -96,7 +96,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 ### 使用local repo (修改url)
 - 1. http://192.168.32.100/HDP/centos6/2.x/updates/2.3.4.0/
-- 2. http://192.168.32.100/HDP-UTILS-1.1.0.20-centos6/HDP-UTILS-1.1.0.20/repos/centos6
+- 2. http://192.168.32.100/HDP-UTILS-1.1.0.20/repos/centos6/
 - 參照附圖
 - https://github.com/ywchiu/hadoopiii2016/blob/master/setup.png
 
