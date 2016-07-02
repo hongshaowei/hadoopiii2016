@@ -92,7 +92,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 - ambari-server start
 
 ### 連線至Server
-- 192.168.81.128:8080
+- 0.0.0.0:8080
 
 ### private key
 - cat ~/.ssh/id_rsa
