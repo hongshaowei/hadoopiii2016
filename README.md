@@ -12,11 +12,16 @@
 - https://drive.google.com/a/largitdata.com/file/d/0BwcmldsH2om-T3dQS2V3QklmNHM/view?usp=sharing
 
 
-## 安裝步驟
+## 安裝步驟影片
 ---------------------------------------
 
 ### CentOS 安裝
 - https://www.youtube.com/watch?v=RkC16DNcYGI&feature=youtu.be
+
+### Ambari Server 安裝步驟
+- https://youtu.be/lFBIY_687xY
+
+## 安裝步驟文字
 
 ### prepare machine
 - su - 
@@ -36,8 +41,8 @@
 
 ### Java Download
 - http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u79-oth-JPR
-- https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/
-- http://192.168.32.100/jdk-7u79-linux-x64.rpm
+- (選項) https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/
+- (選項) http://192.168.32.100/jdk-7u79-linux-x64.rpm
 - rpm –ivh jdk-7u79-linux-x64.rpm
 
 ### 於安裝主機上建立軟連結
@@ -76,11 +81,9 @@ export PATH=$PATH:$JAVA_HOME/bin
 - cd /tmp
 - wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.2.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo 
 - yum repolist
-- yum install ambari-server
-
-### 替代方案
-- wget http://192.168.32.100/ambari-server-2.2.0.0-1310.x86_64.rpm
-- yum localinstall ambari-server-2.2.0.0-1310.x86_64.rpm
+- (選項) yum install ambari-server
+- (建議選項) wget http://192.168.32.100/ambari-server-2.2.0.0-1310.x86_64.rpm
+- (建議選項) yum localinstall ambari-server-2.2.0.0-1310.x86_64.rpm
 
 ### 設定 Ambari
 - ambari-server setup
@@ -93,11 +96,6 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 ### private key
 - cat ~/.ssh/id_rsa
-
-### 設定Repo
-- cd /tmp
-- wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.2.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo 
-- yum repolist
 
 ### 修改 replication
 - HDFS　-> block replication -> 1
