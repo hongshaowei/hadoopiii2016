@@ -97,6 +97,18 @@ export PATH=$PATH:$JAVA_HOME/bin
 ### private key
 - cat ~/.ssh/id_rsa
 
+
+### 設定Repo
+- cd /tmp
+- wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.2.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo 
+- yum repolist
+
+
+### 使用local repo
+- 將url 更改成192.168.32.106
+- https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.1.0/bk_Installing_HDP_AMB/content/_hdp_23_repositories.html
+
+
 ### 修改 replication
 - HDFS　-> block replication -> 1
 
@@ -129,28 +141,54 @@ hadoop.proxyuser.root.hosts=*
 - wget https://dumps.wikimedia.org/other/pagecounts-raw/2007/2007-12/pagecounts-20071209-180000.gz
 - gunzip pagecounts-20071209-180000.gz
 
-### eclipse (root)
+
+## setup hue
+
+- hadoop.proxyuser.hue.hosts * 
+- hadoop.proxyuser.hue.groups * 
+- hadoop.proxyuser.hcat.groups * 
+- hadoop.proxyuser.hcat.hosts * 
+- hadoop.proxyuser.root.groups * 
+- hadoop.proxyuser.root.hosts * 
+- hadoop.proxyuser.ambariusr.groups * 
+- hadoop.proxyuser.ambariusr.hosts *  
+- 確定 hdfs-site.xml 的 webhdfs 是 enabled 
+- oozie.service.ProxyUserService.proxyuser.hue.hosts * 
+- oozie.service.ProxyUserService.proxyuser.hue.groups *
+- webhcat.proxyuser.hue.hosts 是* 
+- webhcat.proxyuser.hue.groups 是*
+
+
+## setup ini 
+- vi /etc/hue/conf/hue.ini
+- webhdfs_url=http://master:50070/webhdfs/v1/
+- /etc/init.d/hue restart
+
+### eclipse (hadoop)
 - wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - cd eclipse 
 - ./eclipse
 
 ### eclipse include jar
-- a. /usr/lib/hadoop/client/*.jar
-- b. /usr/lib/hadoop/*.jar
-- c. /usr/lib/hadoop-mapreduce/*.jar
+- a. /usr/hdp/2.3.4.0-3485/hadoop/client/*.jar
+- b. /usr/hdp/2.3.4.0-3485/hadoop-mapreduce/*.jar
+
+### Process Data
+- head part-r-00000
+- cat part-r-00000 | sort -k 2 -nr | head
+- cat part-r-00000 | sort -k 2 -nr | awk '{if(length($0)>10) print $0}' | head
+
 
 ### link right java version (root)
+- su - 
 - rm /usr/bin/java
 - ln -s /usr/java/java/bin/java /usr/bin/java
 - java -version
 
 ### move jar
 - su - 
-- mv /home/hadoop /wc1* /home/hdfs
-- chown hdfs:hdfs -R /home/hdfs/wc1*
+- mv wc* /home/hdfs/
+- chown hdfs:hdfs -R /home/hdfs/wc*
 - su - hdfs
-- hadoop jar wc1.jar /user/admin/data /user/admin/out2
-
-### Open local httpd service 
-- service httpd start
+- hadoop jar wc.jar /tmp/wc.txt /tmp/out
