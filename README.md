@@ -125,12 +125,6 @@ hadoop.proxyuser.root.hosts=*
 - su - hdfs
 - hadoop dfsadmin -safemode leave
 
-##設定權限
-- su - hdfs
-- hadoop fs -mkdir /user/admin
-- hadoop fs -chown admin:hadoop /user/admin
-
-
 ## Ambari Memory Revision (with root)
 - vi /var/lib/ambari-server/ambari-env.sh
 - 將參數-Xmx2048m 修改成-Xmx4096m -XX:PermSize=128m -XX:MaxPermSize=128m
@@ -143,33 +137,17 @@ hadoop.proxyuser.root.hosts=*
 - gunzip pagecounts-20071209-180000.gz
 
 
-## setup hue
-
-- hadoop.proxyuser.hue.hosts * 
-- hadoop.proxyuser.hue.groups * 
-- hadoop.proxyuser.hcat.groups * 
-- hadoop.proxyuser.hcat.hosts * 
-- hadoop.proxyuser.root.groups * 
-- hadoop.proxyuser.root.hosts * 
-- hadoop.proxyuser.ambariusr.groups * 
-- hadoop.proxyuser.ambariusr.hosts *  
-- 確定 hdfs-site.xml 的 webhdfs 是 enabled 
-- oozie.service.ProxyUserService.proxyuser.hue.hosts * 
-- oozie.service.ProxyUserService.proxyuser.hue.groups *
-- webhcat.proxyuser.hue.hosts 是* 
-- webhcat.proxyuser.hue.groups 是*
-
-
-## setup ini 
-- vi /etc/hue/conf/hue.ini
-- webhdfs_url=http://master:50070/webhdfs/v1/
-- /etc/init.d/hue restart
-
 ### eclipse (hadoop)
 - wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - cd eclipse 
 - ./eclipse
+
+### Use WordCount.java
+- https://github.com/ywchiu/hadoopiii2016/blob/master/WordCount/WordCount.java
+- Download cnn news to wc.txt, and upload to /tmp/
+- change args[0] -> hdfs://master:8020/tmp/wc.txt
+- change args[1] -> hdfs://master:8020/tmp/out
 
 ### eclipse include jar
 - a. /usr/hdp/2.3.4.0-3485/hadoop/client/*.jar
@@ -193,3 +171,9 @@ hadoop.proxyuser.root.hosts=*
 - chown hdfs:hdfs -R /home/hdfs/wc*
 - su - hdfs
 - hadoop jar wc.jar /tmp/wc.txt /tmp/out
+
+##設定權限
+- su - hdfs
+- hadoop fs -mkdir /user/admin
+- hadoop fs -chown admin:hadoop /user/admin
+
