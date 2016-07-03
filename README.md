@@ -131,6 +131,12 @@ hadoop.proxyuser.root.hosts=*
 - hadoop fs -chown admin:hadoop /user/admin
 
 
+## Ambari Memory Revision (with root)
+- vi /var/lib/ambari-server/ambari-env.sh
+- 將參數-Xmx2048m 修改成-Xmx4096m -XX:PermSize=128m -XX:MaxPermSize=128m
+- ambari-server stop
+- ambari-server start
+
 ## get wiki count
 - su - hdfs
 - wget https://dumps.wikimedia.org/other/pagecounts-raw/2007/2007-12/pagecounts-20071209-180000.gz
