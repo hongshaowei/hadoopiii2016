@@ -178,3 +178,15 @@ hadoop.proxyuser.root.hosts=*
 - hadoop fs -mkdir /user/admin
 - hadoop fs -chown admin:hadoop /user/admin
 
+## Download Purchase Order
+- wget https://github.com/ywchiu/hadoopiii2016/raw/master/purchase_order.csv
+
+## Examine DB (root)
+- su - 
+- mysql
+- show databases;
+- use hive;
+- show tables;
+- select * from DBS;
+- select * from TBLS;
+- select * from COLUMNS_V2;
