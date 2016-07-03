@@ -139,6 +139,7 @@ hadoop.proxyuser.root.hosts=*
 
 ### eclipse (hadoop)
 - wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
+- (選項)wget http://192.168.32.112/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - cd eclipse 
 - ./eclipse
