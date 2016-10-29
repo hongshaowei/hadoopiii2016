@@ -42,7 +42,7 @@
 ### Java Download
 - http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u79-oth-JPR
 - (選項) https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/
-- (選項) http://192.168.32.100/jdk-7u79-linux-x64.rpm
+- (選項) http://192.168.10.28/jdk-7u79-linux-x64.rpm
 - rpm –ivh jdk-7u79-linux-x64.rpm
 
 ### 於安裝主機上建立軟連結
@@ -82,7 +82,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 - wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.2.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo 
 - yum repolist
 - (選項) yum install ambari-server
-- (建議選項) wget http://192.168.32.100/ambari-server-2.2.0.0-1310.x86_64.rpm
+- (建議選項) wget http://192.168.10.28/ambari-server-2.2.0.0-1310.x86_64.rpm
 - (建議選項) yum localinstall ambari-server-2.2.0.0-1310.x86_64.rpm
 
 ### 設定 Ambari
@@ -95,8 +95,8 @@ export PATH=$PATH:$JAVA_HOME/bin
 - 0.0.0.0:8080
 
 ### 使用local repo (修改url)
-- 1. http://192.168.32.100/HDP/centos6/2.x/updates/2.3.4.0/
-- 2. http://192.168.32.100/HDP-UTILS-1.1.0.20/repos/centos6/
+- 1. http://192.168.10.28/HDP/centos6/2.x/updates/2.3.4.0/
+- 2. http://192.168.10.28/HDP-UTILS-1.1.0.20/repos/centos6/
 - 參照附圖
 - https://github.com/ywchiu/hadoopiii2016/blob/master/setup.png
 
@@ -139,7 +139,7 @@ hadoop.proxyuser.root.hosts=*
 
 ### eclipse (hadoop)
 - wget http://eclipse.stu.edu.tw/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
-- (選項)wget http://192.168.32.112/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
+- (選項)wget http://192.168.10.28/eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz
 - cd eclipse 
 - ./eclipse
